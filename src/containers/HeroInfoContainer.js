@@ -50,7 +50,6 @@ class HeroInfoDescription extends Component{
                     heroImage={heroe.thumbnail.path+'/portrait_uncanny'+'.jpg'} 
                     heroName={heroe.name}
                     heroDescrip={heroe.description}
-                    
                     />
                         </>
                     );}

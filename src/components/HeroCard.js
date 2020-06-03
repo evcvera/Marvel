@@ -19,13 +19,13 @@ function HeroCard({name,imagen,to,classes}){
 
 export default withStyles({
     item:{
-        minWidth: "330px",
+        minWidth: "360px",
         margin: "1em",
         boxSizing: "border-box",
         textAling: "center",
         border: "solid 3px",
     },
     media:{
-        height: "450px"
+        height: "360px"
     }
 })(HeroCard);
