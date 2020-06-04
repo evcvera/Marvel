@@ -7,22 +7,43 @@ import {createClient} from 'marvel-api';
 
 class HerosListContainer extends Component{
 
-    state={
-        herosData:[],
-    };
+    
+    constructor (){
+        super();
+        this.state ={
+            herosData:[],
+            min:0,
+            max:1480,
+            pos:0,
+            cantidad_traer:0,
+            desde_donde_traer:0,
+            
+        };
+         //esto deberia ir en <button> pero para una buena practica va en el constructor
+         this.handleCountClick=this.handleCountClick.bind(this);         
+    }  
+
+    
+    handleCountClick(e){
+        console.log("PRIMER CLICK!")
+        this.setState({
+          pos:this.state.pos+20
+        })
+        ;
+      }
+    
+
+    
     componentDidMount(){
         var api= createClient({
             publicKey: 'eb21a48643b2901fea305523c0c44e18',
             privateKey: '0e3a61991d39296e0a077cc5d72cfb52017aa85d',
         });
-
-        api.characters.findAll(20,0).then(console.log).fail(console.error).done();
-
-        api.characters.findAll(100,0)
+        console.log({pos:this.state.pos})
+        api.characters.findAll(0,this.state.pos)
         .then(res =>{
             //aqui se subdivide hasta llegar  a results (que es lo que busco)
             const herosData= res.data;
-
             this.setState({
                 herosData
             })
@@ -32,6 +53,9 @@ class HerosListContainer extends Component{
         })
         
     }
+
+
+
 
     //Aqui esta la magia
     /* componentDidMount(){
@@ -49,12 +73,16 @@ class HerosListContainer extends Component{
         })
     }*/
 
+
+
     render() {
         const {herosData}=this.state;
         return (
             <div className="List__background">
-            <AppNav></AppNav>
-            <List herosdata={herosData} />
+            <AppNav key={Math.random()}/>
+            <button id="add" onClick={this.handleCountClick}>Anterior</button>
+            <button id="reset" onClick={console.log(this.state.pos)}>Siguiente</button>
+            <List key={Math.random()} herosdata={herosData} />
             </div>
         );
     }

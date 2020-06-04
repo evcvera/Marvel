@@ -6,14 +6,14 @@ import {Grid} from '@material-ui/core';
 function List ({herosdata}){
     return(
         <div >
-        <Fragment>
-        <h1 className="List__titulo">SUPER HEROS</h1>
-            <Grid container spacing={24} justify="center">
+        <Fragment key={Math.random()}>
+        <h1 className="List__titulo">SUPER HEROES</h1>
+            <Grid key={Math.random()} container spacing={24} justify="center">
                 {herosdata.map((heroe,index )=>{
                     console.log(heroe)
                     return (
                     <HeroCard 
-                    to={`/hero-info/${index}`}
+                    to={`/hero-info/${heroe.id}`}
                     name={heroe.name} 
                     imagen={heroe.thumbnail.path+'/portrait_uncanny'+'.jpg'} />
                     );
