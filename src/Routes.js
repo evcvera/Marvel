@@ -10,6 +10,7 @@ const Routes = () => {
             <Route exact path='/' component={Home}/>
             <Route path='/heros' component={HerosListContainer}/>
             <Route exact path="/hero-info/:heroIndex" component={HeroInfoContainer}/>
+
         </Switch>
     );
 }

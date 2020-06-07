@@ -1,11 +1,15 @@
-.app{
-    background-image: none;
+.App-header{
+    background-image: url(/images/eureka_labs.png) ; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 65%;
+
 }
 
 .HeroCard_h2{
     color: black;
     text-align: center;
-    padding: 30px 0px 0px;
     
 }
 
@@ -16,5 +20,40 @@
 
 .HeroDescription__image{
     border-color: black;
-    border: solid 3px
+    border: solid 3px;
+    height: 100%;
+}
+
+.appNav_search{
+    display: flex;
+    float:right;
+}
+
+
+.NavColor{
+    background-color: '#5A061D';
+}
+
+.AppNav_Marvel{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.div_grid{
+    padding: 100px 100px 0px 100px;
+    display: inline-block;
+}
+
+.App-button{
+    height: 10%;
+    position: absolute;
+    background-color: #E2E3DD;
+    font-family: Comic Sans  120% cursive;
+    border-radius: 10%;
+    left: 40%;
+    top: 1%;
+    
 }
