@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import HeroDescription from '../components/HeroDescription';
-import axios from 'axios';
+import HeroDescription from '../../components/HeroDescription/HeroDescription';
 import { Grid } from '@material-ui/core';
-import HeroList from '../components/HeroList';
-import HeroCard from '../components/HeroCard';
-import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
-import AppNav from '../components/AppNav';
+import AppNav from '../../components/AppNav/AppNav';
 import './_shared.scss';
 import { createClient } from 'marvel-api';
 
@@ -53,7 +49,7 @@ class HeroInfoContainer extends Component {
             <>
                 <div className="List__background">
                     <AppNav handleSearch={this.handleSearch} />
-                    <  Grid container spacing={10} justify="center">
+                    < Grid justify="center">
                         {herosData.map((heroe, index) => {
                             return (
                                 <div>

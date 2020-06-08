@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import HeroList from '../components/HeroList';
-import AppNav from '../components/AppNav';
+import HeroList from '../../components/HeroList/HeroList';
+import AppNav from '../../components/AppNav/AppNav';
 import './_shared.scss';
 import { createClient } from 'marvel-api';
 import Pagination from '@material-ui/lab/pagination';

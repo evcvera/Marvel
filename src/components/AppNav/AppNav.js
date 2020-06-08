@@ -1,11 +1,8 @@
 import React from 'react';
-import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar } from '@material-ui/core';
 import PropTypes from 'prop-types'
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import Typography from '@material-ui/core/Typography';
-import { fade, makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
 import { Link } from 'react-router-dom';

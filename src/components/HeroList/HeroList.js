@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import HeroCard from './HeroCard';
+import HeroCard from '../HeroCards/HeroCard';
 import { Grid } from '@material-ui/core';
 
 
@@ -7,7 +7,7 @@ function HeroList({ herosdata }) {
     return (
         <div >
             <Fragment>
-                <Grid container spacing={10} justify="center">
+                <Grid container spacing={0} justify="center">
                     {herosdata.map((heroe, index) => {
                         return (
                             <HeroCard
